@@ -1,0 +1,9 @@
+minecraft:blue_ice
+minecraft:delta
+minecraft:desert_well
+minecraft:end_gateway
+minecraft:end_spike
+minecraft:ice_patch
+minecraft:ice_spike
+minecraft:large_basalt_columns
+minecraft:small_basalt_columns

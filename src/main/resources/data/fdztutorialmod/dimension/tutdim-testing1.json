@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:overworld",
+  "generator": {
+    "biome_source": {
+      "type": "minecraft:checkerboard",
+      "biomes": [
+        "fdztutorialmod:tut1b_biome1_mcdef_red",
+        "fdztutorialmod:tut1b_biome3_mcdef_cyan",
+        "fdztutorialmod:testing1_biome1_mcdef_hay"
+      ]
+    },
+    "seed": 0,
+    "settings": "minecraft:overworld",
+    "type": "minecraft:noise"
+  }
+}

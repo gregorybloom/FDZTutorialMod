@@ -1,0 +1,2 @@
+minecraft:lake_lava
+minecraft:lake_water

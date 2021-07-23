@@ -1,0 +1,2 @@
+minecraft:freeze_top_layer
+minecraft:void_start_platform

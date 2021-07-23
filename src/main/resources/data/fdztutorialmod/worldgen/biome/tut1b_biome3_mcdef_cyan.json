@@ -1,0 +1,50 @@
+{
+  "effects": {
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    },
+    "sky_color": 7907327,
+    "fog_color": 12638463,
+    "water_color": 4159204,
+    "water_fog_color": 329011,
+    "foliage_color": 14745518,
+    "grass_color": 7907327,
+    "grass_color_modifier": "none"
+  },
+  "surface_builder": {
+    "config": {
+      "top_material": {
+        "Properties": {
+          "snowy": "false"
+        },
+        "Name": "minecraft:grass_block"
+      },
+      "under_material": {
+        "Name": "minecraft:dirt"
+      },
+      "underwater_material": {
+        "Name": "minecraft:gravel"
+      }
+    },
+    "type": "minecraft:default"
+  },
+  "features": [
+    [
+      "minecraft:acacia"
+    ]
+  ],
+  "starts": [],
+  "spawners": {},
+  "spawn_costs": {},
+  "precipitation": "rain",
+  "temperature": 0.8,
+  "temperature_modifier":"none",
+  "downfall": 0.9,
+  "category": "swamp",
+  "depth": -0.125,
+  "scale": 0.125,
+  "carvers": {}
+}

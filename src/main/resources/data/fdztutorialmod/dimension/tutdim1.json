@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:overworld",
+  "generator": {
+    "biome_source": {
+      "type": "minecraft:checkerboard",
+      "biomes": [
+        "minecraft:plains",
+        "minecraft:forest"
+      ]
+    },
+    "seed": 0,
+    "settings": "minecraft:overworld",
+    "type": "minecraft:noise"
+  }
+}

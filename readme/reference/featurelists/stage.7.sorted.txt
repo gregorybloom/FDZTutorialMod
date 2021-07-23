@@ -1,0 +1,16 @@
+minecraft:disk_clay
+minecraft:disk_gravel
+minecraft:disk_sand
+minecraft:ore_andesite
+minecraft:ore_coal
+minecraft:ore_diamond
+minecraft:ore_diorite
+minecraft:ore_dirt
+minecraft:ore_emerald
+minecraft:ore_gold
+minecraft:ore_gold_extra
+minecraft:ore_granite
+minecraft:ore_gravel
+minecraft:ore_iron
+minecraft:ore_lapis
+minecraft:ore_redstone

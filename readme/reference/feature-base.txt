@@ -1,0 +1,14 @@
+minecraft:block_pile
+minecraft:bonus_chest
+minecraft:decorated
+minecraft:end_gateway
+minecraft:end_island
+minecraft:end_spike
+minecraft:flower
+minecraft:freeze_top_layer
+minecraft:huge_brown_mushroom
+minecraft:huge_fungus
+minecraft:huge_red_mushroom
+minecraft:random_patch
+minecraft:tree
+minecraft:void_start_platform

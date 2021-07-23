@@ -1,0 +1,2 @@
+minecraft:fossil
+minecraft:monster_room

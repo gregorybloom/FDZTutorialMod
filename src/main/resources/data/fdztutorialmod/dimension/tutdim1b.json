@@ -1,0 +1,17 @@
+{
+  "type": "fdztutorialmod:tutdim_type1b",
+  "generator": {
+    "biome_source": {
+      "type": "minecraft:checkerboard",
+      "biomes": [
+        "fdztutorialmod:tut1b_biome1_mcdef_red",
+        "fdztutorialmod:tut1b_biome2_mcdef_snow",
+        "fdztutorialmod:tut1b_biome3_mcdef_cyan",
+        "fdztutorialmod:tut1b_biome4_mcdef_empty"
+      ]
+    },
+    "seed": 0,
+    "settings": "fdztutorialmod:fdz_tut1b_noise",
+    "type": "minecraft:noise"
+  }
+}

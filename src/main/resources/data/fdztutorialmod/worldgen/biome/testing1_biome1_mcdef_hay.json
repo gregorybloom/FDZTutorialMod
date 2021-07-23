@@ -1,0 +1,34 @@
+{
+  "effects": {
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    },
+    "sky_color": 15794042,
+    "fog_color": 16515010,
+    "water_color": 8290319,
+    "water_fog_color": 11839768,
+    "foliage_color": 14745518,
+    "grass_color": 7907327,
+    "grass_color_modifier": "none"
+  },
+  "surface_builder": "fdztutorialmod:fdz_conf_mcdefault_builder",
+  "features": [
+    [
+    "fdztutorialmod:fdz_testing_haystack"
+    ]
+  ],
+  "starts":[],
+  "spawners": {},
+  "spawn_costs": {},
+  "precipitation": "rain",
+  "temperature": 0.8,
+  "temperature_modifier":"none",
+  "downfall": 0.9,
+  "category": "swamp",
+  "depth": -0.125,
+  "scale": 0.125,
+  "carvers": {}
+}

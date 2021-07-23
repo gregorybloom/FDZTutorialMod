@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:decorated",
+  "config": {
+    "decorator": {
+      "type": "minecraft:count_extra",
+      "config": {
+        "count": 4,
+        "extra_count": 1,
+        "extra_chance": 0.1
+      }
+    },
+    "feature": {
+      "type": "minecraft:decorated",
+      "config": {
+        "decorator": {
+          "type": "minecraft:square",
+          "config": {}
+        },
+        "feature": {
+          "type": "minecraft:decorated",
+          "config": {
+            "decorator": {
+              "type": "minecraft:heightmap",
+              "config": {
+                "heightmap": "WORLD_SURFACE_WG"
+              }
+            },
+            "feature": "minecraft:pile_hay"
+          }
+        }
+      }
+    }
+  }
+}

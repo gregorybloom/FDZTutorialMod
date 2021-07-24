@@ -376,25 +376,33 @@ Biome JSONs define features in an "array of arrays", allowing each list to be ex
 
 The below reference list is taken from Minecraft Overworld Biomes, and should give you an idea of what features are typically generated in each 'phase'.
 
-[Full phase-sorted lists are here!](https://github.com/gregorybloom/FDZTutorialMod/tree/main/readme/reference/featurelists/)
+If you are curious, they are named in `net.minecraft.world.gen.GenerationStage`.
 
-1) End Island Decorations
-2) Surface Lakes
+The full, phase-sorted, lists of featuregen elements [are here!](https://github.com/gregorybloom/FDZTutorialMod/tree/main/readme/reference/featurelists/)
+
+1) RAW_GENERATION
+2) LAKES
 > `minecraft:lake_water` <br> `minecraft:lake_lava`
-3) Rock Protrusions and Pillars
+3) LOCAL_MODIFICATIONS<br>
+(Rock Protrusions and Pillars)
 > `minecraft:forest_rock` <br> `minecraft:iceberg_packed`
-4) Fossils and 'Monster Rooms'
+4) UNDERGROUND_STRUCTURES<br>
+(Fossils and 'Monster Rooms')
 > `minecraft:monster_room`
-5) Certain special features
+5) SURFACE_STRUCTURES<br>
 > `minecraft:blue_ice` <br> `large_basalt_columns`
-6) _currently unused_
-7) Ore Generation (including patches of dirt, clay, etc)
+6) STRONGHOLDS
+7) UNDERGROUND_ORES<br>
+(including patches of dirt, clay, etc)
 > `minecraft:ore_dirt` <br> `minecraft:ore_andesite` <br> `minecraft:ore_iron` <br> `minecraft:disk_sand`
-8) Nether Ore Gen (glowstone, quartz, soul fire flames)
+8) UNDERGROUND_DECORATION<br>
+(and Nether Ore Gen - glowstone, quartz, soul fire flames)
 > `minecraft:glowstone` <br> `minecraft:ore_quartz_nether`
-9) Vegetation Patches, Water/Lava Springs
+9) VEGETAL_DECORATION<br>
+(Vegetation Patches, Water/Lava Springs)
 > `minecraft:plain_vegetation` <br> `minecraft:patch_sugar_cane` <br> `minecraft:spring_lava`
-10) Limited Final Features (void start platform, top layer freeze?)
+10) TOP_LAYER_MODIFICATION<br>
+(void start platform, top layer freeze?)
 > `minecraft:freeze_top_layer`
 
 <br>

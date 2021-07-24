@@ -1,4 +1,4 @@
-# YouTubeModding14 fork
+# Based on McJty's Work
 This is a spinoff of McJty's youtube tutorials.  The purposes of this project is to elaborate the dimension-creation code and subsequent worldgen.  I will put up notes and sample code here as I can, partly for my own edification.
 
 See the McJty tutorials and code at:
@@ -251,6 +251,99 @@ Thus, this **Configured Feature** sets up the position for the spawning of anoth
 You can read more about the config properties here:<br>
 https://minecraft.fandom.com/wiki/Configured_feature
 
+<br>
+
+### **Notable Features**
+
+* `block_pile` - takes a **block state provider** to place one (or more) blocks.
+* `decorated` - nestable feature, can use string references as well.
+* `delta_feature` - 
+* `disk` - if there is **water** at the current block, place blocks in circular fomration based on input.
+* `fill_layer` - fills all air blocks in a 16x1x16 layer, given a **block state provider** and an int height.
+* `fossil` - places small structure, based on fossil/overlay structures and processors.
+* `freeze_top_layer` - places snow, replaces water with ice, in snowy biomes. should be present in all biomes.
+* `geode`.
+* `growing_plant` - 
+* `lake` -
+* `netherrack_replace_blobs` - replace all target blocks in certain radius (0-12) with another.
+* `ore` - places ore/blocks of your choice, including a rules test and **discard_chance_on_air_exposure**.
+* `random_boolean_selector` - randomly chooses between two equally likely features.
+* `random_patch` - place plants/blocks based on tries, provided spread, and white/blacklist of replaceable blocks.  Also takes a **block_placer**.
+> * `block_placer` - `simple_block_placer`, `double_plant_placer`, or lastly `column_placer` with a **min** and **extra** size.
+* `random_selector` - randomly chooses a feature from a list with **float** chance.  Places a **default** if none trigger.
+* `replace_single_block` - replaces single block using list of targets/states.
+* `root_system` - generates a root column of some blocks, w/ feature on top.
+* `simple_block` - takes a block, and lists of valid blocks beneath the target, valid blocks at target, valid blocks above it.
+* `simple_random_selector` - randomly chooses from a list of features, equally weighted.
+* `tree` - creates a tree based on multiple properties.
+* `vegetation_patch` - creates a patch of vegetation on a floor or ceiling.  can take a depth, a range, radii, chance of generation, etc.
+
+
+
+### **Decorators**
+
+As per: https://minecraft.fandom.com/wiki/Configured_feature
+
+I've left out a few enteries depending on how unusual or specific they are.  These should help outline the main usable options and what they do.
+
+<br>
+
+**Providers and Values**
+* `int provider`
+  * `constant` - straight in value
+  * `uniform` or `biased_to_bottom` - returns a number between two provided bounds.  If the latter, will be biased to bottom
+  * `clamped` - clamps a value from another **int provider** between two provided bounds
+
+<br>
+  
+* `vertical anchor`
+  * `absolute` - absolute height as seen in F3.
+  * `above_bottom` - relative height from bottom of the world
+  * `below top` - relative height from top of the world
+
+<br>
+  
+* `height provider`
+  * `constant` - **vertical anchor** to use as minimum height
+  * `uniform` - returns a height between two **vertical anchors**.
+  * `biased_to_bottom` or `very_biased_to_bottom` - as `uniform`, with biases.  Has optional `inner` value of minimum '1'.
+  * `trapezoid` - as `uniform`. Has optional `plateau` value, a **vertical anchor** to use as the range in the middle of the trapezoid distribution (of uniform distribution).  Defaults to 0.
+
+<br>
+  
+* `heightmap` values
+  * `MOTION_BLOCKING` - 
+  * `MOTION_BLOCKING_NO_LEAVES` - 
+  * `OCEAN_FLOOR` - 
+  * `OCEAN_FLOOR_WG` - 
+  * `WORLD_SURFACE` - 
+  * `WORLD_SURFACE_WG` - 
+
+<br>
+
+* `block_state_provider`
+  * `simple_state_provider` or `rotated_block_provider` - sets a block, and possible block properties.
+  * `weighted_state_provider` - one or more entries of blocks, each with an integeter weight and possible block properties. 
+
+<br>
+  
+
+**Decorator Types**
+* `carving mask` - returns list of all block positions in current chunk that have been carved out by a carver (not including **noise caves**).  Takes either `air` or `liquid` as the carver type.
+* `cave_surface` - modifies Y coord.  Looks for a Y coord, either a floor or ceiling (depending on config), within an **int provider** search range.  returns nothing if nothing is found.
+* `chance` - returns current position or nothing (on failure). determined by 1/number.
+* `count` - Returns multiple copies of the current block position. The count is determined by an **int provider**
+* `count_extra` - As `count`, but number is determined by a base count and a chance to add an extra count.  They are all plain ints.
+* `count_multilayer` - Returns multiple block positions, placed on different vertical layers and spread in the X and Z direction with a range of 16. The count is per layer and determined by an **int provider**.
+* `count_noise` - As `count`, but the number is either below_noise or above_noise, based on a noise value at the current block position. This noise is the same for each biome or dimension, only dependent on the X and Z coordinates. The count is calculated by noise(x / 200, z / 200) < noise_level ? below_noise : above_noise.
+* `count_noise_biased` - Similar to `count_noise`, the count is based on a noise value at the current block position, but instead of being only two possible values it can gradually change based on the noise value. The count is calculated by ceil((noise(x / noise_factor, z / noise_factor) + noise_offset) * noise_to_count_ratio).
+* `decorated` - chains two **decorators** from this list.  First runs `outer` decorator, then loops the list of results through `inner` decorator and combines the result.
+* `heightmap` - modifies Y coord, set to the **heightmap** (if bottom of the world, returns nothing).
+* `heightmap_spread_double` - modifies Y coord, set to a random value between bottom of world and double the **heightmap**.
+* `range` - modifies Y coord, determined by **height provider**.
+* `spread_32_above` - returns block position with modified Y coord, somewhere between +0 and +32 (excluded).
+* `square` - returns block position with modified XZ coords, somewhere between +0 and +16 (excluded).  ie- scatters the position across the chunk.
+* `water_depth_threshold` - returns block position or nothing at all.  Takes a **height provider** used to set new Y coord.
 
 
 

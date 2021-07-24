@@ -42,6 +42,8 @@ https://minecraft.fandom.com/wiki/Biome/JSON_format
 Wiki on all other worldgen json files:<br>
 https://minecraft.fandom.com/wiki/Custom_world_generation
 
+Structure tutorial github, with commented code and notes!
+https://github.com/TelepathicGrunt/StructureTutorialMod
 
 Awesome tool to make creating worldgen json files much easier! Check it out!<br>
 https://misode.github.io/

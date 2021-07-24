@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:default",
+  "type": "fdztutorialmod:fdz_default_surfacebuilder_class",
   "config": {
     "top_material": {
       "Name": "minecraft:snow_block",

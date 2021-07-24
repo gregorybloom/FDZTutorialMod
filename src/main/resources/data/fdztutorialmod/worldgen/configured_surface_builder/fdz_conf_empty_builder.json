@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:default",
+  "type": "fdztutorialmod:fdz_empty_surfacebuilder_class",
   "config": {
     "top_material": {
       "Name": "minecraft:cobblestone"

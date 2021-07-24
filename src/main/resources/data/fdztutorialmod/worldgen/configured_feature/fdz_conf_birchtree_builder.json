@@ -2,10 +2,10 @@
   "type": "minecraft:tree",
   "config": {
     "ignore_vines": true,
-    "force_dirt": false,
+    "force_dirt": true,
     "minimum_size": {
       "type": "minecraft:two_layers_feature_size",
-      "min_clipped_height": 1,
+      "min_clipped_height": 0,
       "limit": 1,
       "lower_size": 0,
       "upper_size": 1

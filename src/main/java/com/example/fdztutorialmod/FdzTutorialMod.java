@@ -1,5 +1,6 @@
 package com.example.fdztutorialmod;
 
+import com.example.fdztutorialmod.setup.Registration;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,6 +35,8 @@ public class FdzTutorialMod
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        Registration.init();
     }
 
     private void setup(final FMLCommonSetupEvent event)

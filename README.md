@@ -15,6 +15,8 @@ Other skills you should need:
 
 1) Learning the basics of JSON
 2) learning how to read `run/logs/latest.log`
+3) Refreshing/rebuilding projects<br>
+  `gradlew --refresh-dependencies` , `gradlew --stop`
 
 **I have almost zero experience modding minecraft.**  If you have questions, there are two discords that have experienced users: Modded Minecraft, and Minecraft Modded Development.  A search for these discords will help you.
 
@@ -31,7 +33,8 @@ Resources to help with this JSON-driven worldgen are below.
 Forge, the leading framework(?) for modding minecraft:<br>
 https://files.minecraftforge.net/net/minecraftforge/forge/
 
-From the MMD Discords:
+Forge documentation, such as registries<br>
+https://mcforge.readthedocs.io/en/latest/concepts/registries/
 
 Wiki on creating dimension json files:<br>
 https://minecraft.gamepedia.com/Custom_dimension
@@ -112,6 +115,13 @@ Here we set a custom dimension type.
 * [resources.data.fdztutorialmod.dimension_type](https://github.com/gregorybloom/FDZTutorialMod/tree/main/src/main/resources/data/fdztutorialmod/dimension_type)
 
 I strongly suggest using the wikis provided in Resources to familiarize yourself with the content to get an idea of what appears in Dimension Type.
+
+In short, the dimension JSON data references are:<br>
+* `.type` - the `worldgen/dimension_type` data
+* `.generator.settings` - the `worldgen/noise_settings` data
+* `.generator.type` - 
+* `.generator.biome_source.type` -
+
 
 ### **Dimension Noise**
 

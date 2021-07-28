@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:overworld",
+  "generator": {
+    "biome_source": {
+      "type": "minecraft:checkerboard",
+      "biomes": [
+        "fdztutorialmod:testing1_biome1_mcdef_hay"
+      ]
+    },
+    "seed": 345345,
+    "settings": {
+      "base": 5,
+      "verticalvariance": 0.7,
+      "horizontalvariance": 0.3
+    },
+    "type": "fdztutorialmod:chunkgenflats"
+  }
+}

@@ -1,6 +1,8 @@
 package com.example.fdztutorialmod;
 
+import com.example.fdztutorialmod.setup.ModSetup;
 import com.example.fdztutorialmod.setup.Registration;
+import com.example.fdztutorialmod.worldgen.biomes.FDZBiomes;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,7 +27,9 @@ public class FdzTutorialMod
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public FdzTutorialMod() {
+    public static final String MODID = "fdztutorialmod";
+
+public FdzTutorialMod() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -37,6 +41,11 @@ public class FdzTutorialMod
         MinecraftForge.EVENT_BUS.register(this);
 
         Registration.init();
+
+        FDZBiomes.addBiomes();
+        FDZBiomes.addBiomeTypes();
+
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(ModSetup::init);
     }
 
     private void setup(final FMLCommonSetupEvent event)

@@ -17,7 +17,7 @@
   "surface_builder": "fdztutorialmod:fdz_conf_empty_builder",
   "features": [
     [
-      "fdztutorialmod:fdz_conf_birchtree_builder"
+      "minecraft:trees_birch"
     ]
   ],
   "starts": [],
